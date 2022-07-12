@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .reg {
+                margin: 60px auto;
+                border: 2px solid black;
+                width: 500px;
+                height: 330px;
+                padding-left: 20px;
+                border-radius: 30px;
+                /*background-color: #E9D5DA;*/
+                background-color: #FFF6EA;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 align="center" style="color: black">Welcome to the login page</h1>
+        <div class="reg">
+            <h2 align="center"  style="font-size: 28pt;">Login</h2><br>
+            <form name="details" method="post" action="/loginUser">
+                
+                <label style="font-size: 14pt;">Username<br>
+                    <input type="text" name="username" size="60" placeholder="Enter email address or mobile number" required>
+                </label><br><br>
+                
+                <label style="font-size: 14pt;">Password<br>
+                    <input type="password" name="pwd" size="60" placeholder="Enter password">
+                </label><br><br><br>
+                
+                <div align="center">
+                    <input type="submit" value="login">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
+
