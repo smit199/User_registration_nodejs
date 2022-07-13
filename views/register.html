@@ -37,26 +37,32 @@ and open the template in the editor.
         <h1 align="center" style="color: black">Welcome to the registration page</h1>
         <div class="reg">
             <h2 align="center"  style="font-size: 28pt;">Register</h2><br>
+
             <form name="details" method="post" action="registerUser">
                 <label style="font-size: 14pt;">Full Name<br>
                     <input type="text" name="fname" size="60" placeholder="Enter your full name" required>
                 </label><br><br>
+
                 <label style="font-size: 14pt;">Age<br>
                     <input type="text" name="age" size="60" placeholder="Enter your age">
                 </label><br><br>
+
                 <label style="font-size: 14pt;">Mobile no.<br>
                     <input type="tel" name="mobile" size="60" placeholder="Enter your mobile number" pattern="[0-9]{10}" required oninput="this.setCustomValidity('')" oninvalid="this.setCustomValidity('mobile number must be 10 digit number')">
-                    <!-- <input type="text" name="mobile" size="60" placeholder="Enter your mobile number" required> -->
                 </label><br><br>
+
                 <label style="font-size: 14pt;">Email<br>
                     <input type="email" name="mail" size="60" placeholder="Enter your email id">
                 </label><br><br>
+
                 <label style="font-size: 14pt;">Password<br>
                     <input type="password" name="pwd" size="60" placeholder="Enter password">
                 </label><br><br>
+
                 <label style="font-size: 14pt;">Confirm password<br>
                     <input type="password" name="confirmpwd" size="60" placeholder="confirm password" oninput="confirmPassword()">
                 </label><br><br><br>
+                
                 <div align="center">
                     <input type="submit" value="Register"><br><br>
                     <a href="/login">Already registered?</a>

@@ -38,8 +38,8 @@ app.post('/registerUser', (req, res) => {
             const sql = `INSERT INTO users VALUES (null, '${post.fname}', '${post.age}', '${post.mobile}', '${post.mail}', '${post.pwd}')`;
             conn.query(sql, (err) => {
                 if(err) {
-                    console.log("unable to register")
-                    res.end('<html><body><h1>Registration unsuccessful.</h1><br><a href="/register">Try again</a></body></html>');
+                    console.log("unable to register");
+                    res.end('<html><body><h1>Registration unsuccessful.</h1><br><p>User already exist with your mobile no. or email id. Try with different mobile no or email id</p><a href="/register">Back to register</a></body></html>');
                     throw err;
                 }
                 res.end('<html><body><h1>Registration successful.</h1><br><a href="/login">login here</a></body></html>');
@@ -63,7 +63,7 @@ app.post('/loginUser', (req, res) => {
             conn.query(sql, (err, result) => {
                 if(err) {
                     console.log("error happened");
-                    res.end('<html><body><h1>Login unsuccessful.</h1><br><p>error at server side</p><a href="/login">Try again</a></body></html>')
+                    res.end('<html><body><h1>Login unsuccessful.</h1><br><p>error at server side</p><a href="/login">Back to login</a></body></html>')
                     throw err;
                 }
                 else if(result.length===0) {
