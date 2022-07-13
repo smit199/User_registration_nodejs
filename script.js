@@ -40,7 +40,7 @@ app.post('/registerUser', (req, res) => {
                 if(err) {
                     console.log("unable to register");
                     res.end('<html><body><h1>Registration unsuccessful.</h1><br><p>User already exist with your mobile no. or email id. Try with different mobile no or email id</p><a href="/register">Back to register</a></body></html>');
-                    throw err;
+                    console.log(err);
                 }
                 res.end('<html><body><h1>Registration successful.</h1><br><a href="/login">login here</a></body></html>');
                 console.log("1 user registered");
@@ -64,7 +64,7 @@ app.post('/loginUser', (req, res) => {
                 if(err) {
                     console.log("error happened");
                     res.end('<html><body><h1>Login unsuccessful.</h1><br><p>error at server side</p><a href="/login">Back to login</a></body></html>')
-                    throw err;
+                    console.log(err);
                 }
                 else if(result.length===0) {
                     console.log("invalid user")
