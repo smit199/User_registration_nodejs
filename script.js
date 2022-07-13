@@ -67,7 +67,7 @@ app.post('/loginUser', (req, res) => {
                     console.log(err);
                 }
                 else if(result.length===0) {
-                    console.log("invalid user")
+                    console.log("invalid user");
                     res.end('<html><body><h1>Login unsuccessful.</h1><br><p>Username or password is incorrect</p><a href="/login">Try again</a></body></html>');
                 }
                 else {
