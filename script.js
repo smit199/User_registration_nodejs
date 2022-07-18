@@ -5,6 +5,7 @@ const bodyparser = require("body-parser");
 const session = require('express-session');
 const methodOverride = require('method-override');
 const mysql = require('mysql2');
+
 const conn = mysql.createConnection({
     host: "localhost",
     user: "root",
